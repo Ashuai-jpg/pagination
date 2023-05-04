@@ -74,10 +74,10 @@ ul li.active {
     /* transform: rotate(180deg); */
 }
 
-#btn1[disabled=true],#btn2[disabled=true]{
+#btn1:disabled,#btn2:disabled{
     color:gray;
     /* background-color: #ff4568; */
 }
-#btn1[disabled=true] img,#btn2[disabled=true] img{
+#btn1:disabled img,#btn2:disabled img{
     visibility: hidden;
 }   

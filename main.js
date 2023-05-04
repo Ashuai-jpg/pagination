@@ -35,26 +35,30 @@ function activeLink() {
 //     }
 // }
 function autoDisableBtn() {
-    btn1.setAttribute('disabled', false)
-    btn2.setAttribute('disabled', false)
-    console.log(btn1, btn2)
+    btn1.disabled = false
+    btn2.disabled = false
+    // console.log(btn1, btn2)
     if (currentVal == 1) {
-        btn1.setAttribute('disabled', true)
+        btn1.disabled = true
         console.log("disabled 1")
     } else if (currentVal == 6) {
-        btn2.setAttribute('disabled', true)
+        btn2.disabled = true
         console.log("disabled 2")
     }
 }
+// check if need to disable when script first invoke
 autoDisableBtn()
 
+/**
+ * merge 2 btn funcs into 1
+ * 
+ */
 function handleBtn(isback) {
     console.log("clicked")
     for (l of link) {
         l.classList.remove("active")
     }
-    // let type = typeof(isback)
-    // console.log(`${type} : ${isback}`)
+
     if (isback) {
         currentVal--;
     } else {
